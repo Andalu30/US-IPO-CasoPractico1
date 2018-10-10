@@ -2,8 +2,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel} %Idioma español
 \usepackage[margin=30mm]{geometry} %Margenes mas pequeños
-
-
+\usepackage{hyperref} %Enlaces en la documentacion
+\usepackage{graphicx} %Usar imagenes
+\graphicspath{{./media/}}
 
 %opening
 \title{
@@ -21,9 +22,9 @@
 
 \maketitle
 
-\begin{abstract}
-    Esto es un resumen!! CAMBIAR!
-\end{abstract}
+%\begin{abstract}
+%    Esto es un resumen!! CAMBIAR!
+%\end{abstract}
 
 %Índices
 \newpage
@@ -34,50 +35,106 @@
 \newpage
 
 \section{Introducción}
-\subsection{Criterios de visibilidad y comprensión intuitíva}
-\subsection{Criterio de usabilidad}
-\subsection{Criterio del factor humano}
-
+\subsection{Motivación}
+La elaboración de esta memoria nace de la necesidad de documentar el caso práctico número uno de la asignatura 'Interacción persona ordenador' de la titulacion de Ingeniería Informática - Tecnologías Informáticas de la Universidad de Sevilla
+\subsection{Usabilidad}
+Se define como usabilidad la capacidad del producto software para ser entendido, aprendido, usado y resultar atractivo para el usuario, cuando se usa bajo determinadas condiciones. \cite{diapTema1} \cite{iso25010}\\
+Asi pues, teniendo en cuenta esta definición procederemos a analizar la usabilidad de las interfaces de usuario de un aparato físico y de un software.
 
 \section{Informe de la usabilidad de un aparato físico}
-\subsection{Descripción de la interfaz de usuario de un }
+\subsection{Descripción de la interfaz de usuario de un ... }
 \subsection{Planteamiento del problema}
 \subsubsection{Problema 1}
 \subsubsection{Problema 2}
-
 
 \subsection{Soluciones propuestas}
 \subsubsection{Solución al problema 1}
 \subsubsection{Solución al problema 2}
 \subsubsection{Aspectos positivos del diseño inicial}
 \subsubsection{Propuesta adicional}
-
-
 
 
 
 
 \section{Informe de la usabilidad de una aplicación informática}
-\subsection{Descripción de la interfaz de usuario}
+Para esta sección hemos decidido utilizar la web del grupo Simply Supermercados \cite{webSimply} para demostrar los problemas que tiene.\\
+Con tan solo ver la imagen de la figura \ref{fig:pagprin} se pueden apreciar bastantes problemas. Asi pues, pasamos a plantearlo de uno en uno.
+
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.5]{webPrincipal.png}
+ \caption{Página principal del grupo Simply}
+ \label{fig:pagprin}
+\end{figure}
+
+\subsection{Descripción de la interfaz de usuario de la web del grupo Simply Supermecados}
+Al abrir la web del grupo Simply nos encontramos con una pagina web bastante simple que se basa practicamente en el uso de imágenes. Como veremos más adelante, este uso de imagenes excesivo se convierte en uno de los problemas mas latentes de la web.
+Asi mismo, encontramos una gran cantidad de estas imágenes que hacen que la experiencia de usuario no sea satisfactoria. Nos encontramos con una pagina principal que nos pone 26 imagenes la pantalla al mismo tiempo. Asi mismo tambien veremos imágenes que aparentan ser botones y que no lo son, el caso contrario, imagenes que no parecen ser nisiquiera imagenes que funcionan como botones y, hablando de botones, nos encontraremos con botones que no tienen clara su función o que se encuentran mal ubicados.
+
 
 \subsection{Planteamiento del problema}
-\subsubsection{Problema 1}
-\subsubsection{Problema 2}
+\subsubsection{Problema 1: Demasiada información en pantalla y poco estrucurada}
+En la página de inicio hay información de diferentes servicios que ofrecen, pero están ordenadas de forma caótica, ya que servicios que están relacionados, están puestos en sitios poco cercano entre ellos. Además el tamaño de la información, de servicios más importantes, están puestos en un tamaño mucho menor que servicios que no son tan importantes. Todos estos servicios son imágenes, y que en ocasiones estas se solapan,  funcionan como botones pero no queda tan claro para el usuario que tengan esa función. Ampliaremos información sobre esto en el siguiente sección.
+
+\subsubsection{Problema 2: Imágenes que funcionan como botón pero no lo aparentan}
+En esta sección hablaremos de los numerosos botones que aparecen por la web de una forma muy poco convencional.
+En la página principal tenemos los primeros ejemplos de este comportamiento. El banner situado a a derecha del nombre de la empresa esta elaborado por 6 imágenes distintas, y ninguna de ellas indica claramente de forma visual que se trata de un botón que lleva a un sitio distinto llevando incluso a hacer creer que se trata de publicidad. Este banner se puede ver en la figura \ref{fig:bannerarriba}.\\
+
+
+
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.5]{botoncamuflado.png}
+ \caption{Pagina completa }
+ \label{fig:pagcomplbot}
+\end{figure}
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.5]{bannerarriba.png}
+ \caption{Banner de la parte superior de la web}
+ \label{fig:bannerarriba}
+\end{figure}
+
+\subsubsection{Problema 3: Imágenes que aparentan ser un botón y no funcionan como tal }
+\subsubsection{Problema 4: Botones mal ubicados y desestructurados}
+\subsubsection{Problema 5: Menús poco intuitivos}
+
 
 \subsection{Soluciones propuestas}
 \subsubsection{Solución al problema 1}
 \subsubsection{Solución al problema 2}
+\subsubsection{Solución al problema 3}
+\subsubsection{Solución al problema 4}
+\subsubsection{Solución al problema 5}
+
+
 \subsubsection{Aspectos positivos del diseño inicial}
 \subsubsection{Propuesta adicional}
 
-\begin{thebibliography}{9}
 
-\bibitem{lamport94}
-  Leslie Lamport,
-  \textit{\LaTeX: a document preparation system},
-  Addison Wesley, Massachusetts,
-  2nd edition,
-  1994.
+
+
+\begin{thebibliography}{9}
+\bibitem{diapTema1}
+  José mariano González Romano y Víctor Díaz Madrigal,
+  \textit{Introducción a la IPO},
+  \href{https://s3-eu-central-1.amazonaws.com/learn-eu-central-1-prod-fleet01-xythos/5ac734ed505df/1497177?response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27IPO-2018-19-01-Introducci%25C3%25B3n%2520a%2520la%2520IPO.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20181009T201303Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=AKIAIZ3QX2YUHH4EOO3A%2F20181009%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=91e59768c9f86b77180953691bdcae19f7300073d4ad74d0949de1515d0b6f55}{Diapositivas de clase. Tema 1}.
+
+\bibitem{iso25010}
+ISO,
+\textit{ISO 25010},
+\href{https://iso25000.com/index.php/normas-iso-25000/iso-25010/23-usabilidad}{Página Web}.
+
+\bibitem{diapTema2}
+José mariano González Romano y Víctor Díaz Madrigal,
+\textit{Introducción a la IPO},
+\href{https://s3-eu-central-1.amazonaws.com/learn-eu-central-1-prod-fleet01-xythos/5ac734ed505df/1548262?response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27IPO-2018-19-02-Usabilidad.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20181009T201947Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=AKIAIZ3QX2YUHH4EOO3A%2F20181009%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=b0015ef5189a68a14076abd0ef07c9f15c07aa1ef5bebf8a545bf456bbfafe84}{Diapositivas de clase. Tema 2}.
+
+\bibitem{webSimply}
+Grupo Simply Supermercados,
+\textit{Página web de la empresa},
+\href{www.simply.es}{Página Web}.
+
 
 \end{thebibliography}
 
