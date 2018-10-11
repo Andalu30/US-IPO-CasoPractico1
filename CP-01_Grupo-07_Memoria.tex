@@ -30,8 +30,6 @@
 \newpage
 \tableofcontents
 \listoffigures
-\renewcommand{\listtablename}{Índice de tablas} %Cambia el texto de listoftables
-\listoftables
 \newpage
 
 \section{Introducción}
@@ -60,7 +58,7 @@ Asi pues, teniendo en cuenta esta definición procederemos a analizar la usabili
 Para esta sección hemos decidido utilizar la web del grupo Simply Supermercados \cite{webSimply} para demostrar los problemas que tiene.\\
 Con tan solo ver la imagen de la figura \ref{fig:pagprin} se pueden apreciar bastantes problemas. Asi pues, pasamos a plantearlo de uno en uno.
 
-\begin{figure}
+\begin{figure}[h!]
  \centering
  \includegraphics[scale=0.5]{webPrincipal.png}
  \caption{Página principal del grupo Simply}
@@ -84,27 +82,27 @@ Esto se puede ver en la figura \ref{fig:pagcomplbot}
 
 
 
-\begin{figure}
+\begin{figure}[h!]
  \centering
  \includegraphics[scale=0.5]{bannerarriba.png}
  \caption{Banner de la parte superior de la web}
  \label{fig:bannerarriba}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
  \centering
  \includegraphics[scale=0.5]{botoncamuflado.png}
- \caption{Esto son dos botones, aunque no lo parezcan}
+ \caption{Botones gigantescos que ocupan toda la página}
  \label{fig:pagcomplbot}
 \end{figure}
 
 \subsubsection{Problema 3: Imágenes que aparentan ser un botón y no funcionan como tal}
 Igual que hemos observado imagenes que se comportan como botones sin una indicación visual tambien podemos encontrarnos con todo lo contrario, imágenes que parecen ser botones pero que sin embargo no funcionan como tales. Un claro ejemplo de este comportamiento es el que no encontramos en la parte de socios. Como podemos ver en la figura \ref{fig:botonnoboton}
 
-\begin{figure}
+\begin{figure}[h!]
  \centering
  \includegraphics[scale=0.4]{botonquenoesboton.png}
- \caption{Parece ser un boton, pero no lo es}
+ \caption{Claro ejemplo de un diseño que lleva a la confusión.}
  \label{fig:botonnoboton}
 \end{figure}
 
@@ -115,21 +113,21 @@ También encontramos en la página principal cinco botones que pertenecen al nú
 En la parte de “Alta cliente” nos encontramos con un formulario mal estructurado y con las casillas desordenadas, lo que implica que para el usuario sea poco intuitivo rellenar este formulario. También en esta misma página encontramos un botón de imprimir que no deja nada claro para que sirve ni se le ve ningún sentido. Figura \ref{fig:imprimiryformulario}.
 
 
-\begin{figure}
+\begin{figure}[h!]
  \centering
  \includegraphics[scale=0.5]{bannerysubs.png}
  \caption{Boton de subscripcion y cambio del banner}
  \label{fig:bannerysubs}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
  \centering
  \includegraphics[scale=0.5]{formulariocondiciones.png}
  \caption{El boton de aceptar las condiciones se encuentra debajo del de enviar}
  \label{fig:formulariocondiciones}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
  \centering
  \includegraphics[scale=0.5]{imprimiryformulario.png}
  \caption{El formulario no se visualiza correctamente y aparece un boton de imprimir sin sentido.}
@@ -140,7 +138,8 @@ En la parte de “Alta cliente” nos encontramos con un formulario mal estructu
 
 \subsubsection{Problema 5: Menús poco intuitivos}
 En esta web nos encontramos que utiliza menús, que una vez los desplegamos o seleccionamos cada categoría, nos aparece dentro de esta un segundo menú con mas categorías y a su vez alguna de estas categoría tiene a su vez mas subcategorias, tal y como lo podemos ver en la figura \ref{fig:subsubmenu}
-\begin{figure}
+
+\begin{figure}[h!]
  \centering
  \includegraphics[scale=0.5]{subsubmenu.png}
  \caption{Nos encontramos con una subseccion dentro de un submenu dentro de un menu}
@@ -150,21 +149,55 @@ En esta web nos encontramos que utiliza menús, que una vez los desplegamos o se
 
 
 \subsection{Soluciones propuestas}
+La mayoria de los problemas enumerados anteriormente se pueden resolver de una forma sencilla tal y como expondremos a continuación.
+
 \subsubsection{Solución al problema 1}
+El primer problema se da en practicamente todas las subpaginas de la web pero nos centraremos en la página principal para poder dar una solución.\\
+Lo primero que habria que hacer es organizar la página. Actualmente nos encontramos con una amalgama de imagenes que no parecen tener ningun orden.
+Un primer cambio seria eliminar la imagenes a la derecha del nombre del grupo, ya que como comentamos anteriormente parecen fuera de lugar.
+A continuación deberiamos de cambiar el banner por un carousel grande que aparezca al principio de la web. Cualquier framework nos ayudaria bastante para crear un carousel de este tipo, un ejemplo seria el de bootstrap \cite{bootstrapcarr}.\\
+Para la parte de abajo de la web, podriamos solucionar si reducimos el numero de imagenes y creamos un menú en el que podamos seleccionar lo que queramos sin tener que ver las 8 imágenes al mismo timepo. Además, algunas de estas secciones estan duplicadas, como es el caso de las gasolineras, que tienen un enlace en la parte superior y en la parte inferior.\\
+De esta forma acabariamos con una web mucho más simple y usable.
+
+
+
 \subsubsection{Solución al problema 2}
+Para solucionar este problema nos encontramos con una solucion muy sencilla.\\
+Como vemos en la figura \ref{fig:pagcomplbot}, la página completa se compone de dos grandes imágenes que se comportan como dos botones gigantescos.\\
+Lo mas razonable seria prescindir de los botones. La web que vemos en la figura puede crearse facilmente con un banner en la parte superior sin necesidad de que este sea un gran botón. Asi mismo la segunda parte de la web es, al igual que en la primera parte, facilmente mejorable si se presciende completamente del botón. Al fin y al cabo se trata de una imagen meramente informativa que se puede sustituir facilmente con un poco de HTML y CSS.\\
+Para sustituir el uso de esos hipervinculos dentro de la imagen, se puede utilizar botones de un tamaño mas reducido y que se fijen a reglas conocidas de diseño como, por ejemplo, Material Desing de Google. \cite{matdesing}.
+
 \subsubsection{Solución al problema 3}
+Solucionar este problema es muy sencillo. Lo único que habria que hacer es que esas imágenes funcionen realmente como un botón. En otras partes de la web ya se ha visto como se utiliza este comportamiento en, practicamente, el mismo estilo de boton (Figura \ref{fig:siesunboton}). Así pues, la solución razonable sería implementar este mismo tipo de botón.
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[scale=0.4]{siesunboton.png}
+ \caption{Ejemplo de botón bien definido}
+ \label{fig:siesunboton}
+\end{figure}
+
 \subsubsection{Solución al problema 4}
+Respecto al problema 4, la mala ubicacion de los botones que nos encontramos, se puede solucionar realizando cambios en el CSS de la web. Asi mismo, ya que se estaría modificando el CSS, se podrian utilizar un estilo similar al del resto de botones de la web, siguiendo la imagen corporativa. Actualmente se estan utilizando los botones por defecto que renderiza el navegador.\\
+Respecto al cuadro de aceptar los terminos y condiciones del formulario, la solución seria ponerlo encima del botón de enviar, o, lo que es lo mismo, poner el boton de enviar debajo.
+
 \subsubsection{Solución al problema 5}
+Para solucionar el problema de menus poco intuitivos, se puede utilizar una solución que se usa en otra partes de la web, menús desplegables.
+Como vemos en la figura \ref{fig:subsubmenu} este tipo de menús ya se utilizan en la web y se podrian applicar a todos los menús. De esta forma podriamos ver todos los submenus con tan solo pasar el raton por encima del primer menú. Asi mismo, cabe destacar que la página de atención al cliente no posee ningun menú aparte por lo que se pierde la consistencia del menú superior. Una solución a este problema seria crear submenus con lo que antes eran botones a página completa que redirigian a otros sitios.
 
 
 \subsubsection{Aspectos positivos del diseño inicial}
-Dentro de los pocos aspectos positivos de que podemos destacar de esta web se encuentra el uso de los colores. La imagen corporativa utiliza mucho el color rojo, lo que hace que parte de la web se encuentre en este mismo color. Sin embargo tambien nos encontramos con partes en colores como el verde, que contrata bastante bien con el rojo sin llegar a ser incomodos para la vista.
+Dentro de los pocos aspectos positivos de que podemos destacar de esta web se encuentra el uso de los colores. La imagen corporativa utiliza mucho el color rojo, lo que hace que parte de la web se encuentre en este mismo color. Sin embargo tambien nos encontramos con partes en colores como el verde, que contrata bastante bien con el rojo sin llegar a ser incómodo para la vista.\\
+Tambien se puede destacar la rapidez de la web. Inspeccionando el codigo fuente podemos ver como se trata de una web muy sencilla, que apenas usa javascript. Si bien es cierto que en conexiones excesivamente lentas es posible que las imagenes (las cuales componen toda la web, como comentamos anteriormente) tarden un poco en cargar, ninguna conexión media de hoy día debería de tener problemas con ellas.\\
+Un último aspecto positivo a resaltar, aunque no tiene nada que ver con la interfaz de usuario, es que la web posee certificado digital, lo que, viendo el lamentable estado de las demás partes de la web, sorprende.
+
+
 \subsubsection{Propuesta adicional}
+Como propuesta adicional creemos que la empresa deberia plantearse seriamente crear una web desde cero, ya que la web que actualmente tienen es un claro ejemplo de que no todo el mundo deberia de crear páginas web. El uso de imagenes repartidas por toda la web para cualquier cosa que se podría realizar con texto es claramente una mala decisión que le quita profesionalidad a la empresa.\\
+Cualquier persona con un mínimo conocimiento de creación de paginas web puede hacer una web mucho mejor que la actual.
 
 
-
-
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 \bibitem{diapTema1}
   José mariano González Romano y Víctor Díaz Madrigal,
   \textit{Introducción a la IPO},
@@ -185,6 +218,15 @@ Grupo Simply Supermercados,
 \textit{Página web de la empresa},
 \href{www.simply.es}{Página Web}.
 
+\bibitem{matdesing}
+Guia de estilo de los botones en material desing,
+\textit{Buttons - Material Desing},
+\href{https://material.io/design/components/buttons.html}{Página Web}.
+
+\bibitem{bootstrapcarr}
+W3School,
+\textit{Bootstrap Carousel},
+\href{https://www.w3schools.com/bootstrap/bootstrap_carousel.asp}{Página Web}.
 
 \end{thebibliography}
 
