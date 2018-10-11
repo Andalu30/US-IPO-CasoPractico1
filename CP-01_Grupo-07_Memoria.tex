@@ -42,12 +42,21 @@ Asi pues, teniendo en cuenta esta definición procederemos a analizar la usabili
 \section{Informe de la usabilidad de un aparato físico}
 \subsection{Descripción de la interfaz de usuario de un ... }
 \subsection{Planteamiento del problema}
-\subsubsection{Problema 1}
-\subsubsection{Problema 2}
+\subsubsection{Problema 1: Señales contradictorias}
+El problema es bastante evidente solo viendo la figura \ref{fig:imgsenales}: por una parte mientras vamos de frente vemos que no podemos seguir recto ya que tenemos una señal de dirección prohibida, a la vez que tenemos una señal que te obliga a girar a la derecha. Hasta ahí es un cruce normal, pero al empezar a girar te encuentras con que la dirección a la que te obligan a girar tiene una señal de dirección prohibida, la cual te deja sin opciones en el cruce. Esto a parte de mala interfaz puede considerarse negligencia ya que puede provocar accidentes tanto si el conductor se frena y bloquea el cruce o si sigue por la calle y resulta que la validez es la de dirección prohibida y viene otro vehículo de frente.
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[scale=0.35]{prohibidoseverywhere.png}
+ \caption{Imagen de una intersección caótica}
+ \label{fig:imgsenales}
+\end{figure}
+
 
 \subsection{Soluciones propuestas}
 \subsubsection{Solución al problema 1}
-\subsubsection{Solución al problema 2}
+Asegurar qué señal tiene validez y retirar la que induce al error
+
 \subsubsection{Aspectos positivos del diseño inicial}
 \subsubsection{Propuesta adicional}
 
@@ -179,7 +188,7 @@ Solucionar este problema es muy sencillo. Lo único que habria que hacer es que 
 
 \subsubsection{Solución al problema 4}
 Respecto al problema 4, la mala ubicacion de los botones que nos encontramos, se puede solucionar realizando cambios en el CSS de la web. Asi mismo, ya que se estaría modificando el CSS, se podrian utilizar un estilo similar al del resto de botones de la web, siguiendo la imagen corporativa. Actualmente se estan utilizando los botones por defecto que renderiza el navegador.\\
-Respecto al cuadro de aceptar los terminos y condiciones del formulario, la solución seria ponerlo encima del botón de enviar, o, lo que es lo mismo, poner el boton de enviar debajo.
+Respecto al cuadro de aceptar los terminos y condiciones del formulario, la solución seria ponerlo encima del botón de enviar.
 
 \subsubsection{Solución al problema 5}
 Para solucionar el problema de menus poco intuitivos, se puede utilizar una solución que se usa en otra partes de la web, menús desplegables.
@@ -193,7 +202,7 @@ Un último aspecto positivo a resaltar, aunque no tiene nada que ver con la inte
 
 
 \subsubsection{Propuesta adicional}
-Como propuesta adicional creemos que la empresa deberia plantearse seriamente crear una web desde cero, ya que la web que actualmente tienen es un claro ejemplo de que no todo el mundo deberia de crear páginas web. El uso de imagenes repartidas por toda la web para cualquier cosa que se podría realizar con texto es claramente una mala decisión que le quita profesionalidad a la empresa.\\
+Como propuesta adicional creemos que la empresa deberia plantearse seriamente crear una web desde cero, ya que la web que actualmente tienen es un claro ejemplo de que no todo el mundo deberia crear páginas web. El uso de imagenes repartidas por toda la web para cualquier cosa que se podría realizar con texto es claramente una mala decisión que le quita profesionalidad a la empresa.\\
 Cualquier persona con un mínimo conocimiento de creación de paginas web puede hacer una web mucho mejor que la actual.
 
 
@@ -224,7 +233,7 @@ Guia de estilo de los botones en material desing,
 \href{https://material.io/design/components/buttons.html}{Página Web}.
 
 \bibitem{bootstrapcarr}
-W3School,
+W3Schools,
 \textit{Bootstrap Carousel},
 \href{https://www.w3schools.com/bootstrap/bootstrap_carousel.asp}{Página Web}.
 
