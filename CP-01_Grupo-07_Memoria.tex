@@ -22,10 +22,6 @@
 
 \maketitle
 
-%\begin{abstract}
-%    Esto es un resumen!! CAMBIAR!
-%\end{abstract}
-
 %Índices
 \newpage
 \tableofcontents
@@ -42,25 +38,67 @@ Asi pues, teniendo en cuenta esta definición procederemos a analizar la usabili
 
 \section{Informe de la usabilidad de un aparato físico}
 \subsection{Descripción de la interfaz de usuario de un microondas}
-\subsection{Planteamiento del problema}
-\subsubsection{Problema 1: }
+En este apartado nos encontramos con el microondas Daewoo KOG-6F2B el cual tiene ciertos problemas de usabilidad que comentaremos a continuación.\\
+Antes, veremos detalladamente la interfaz para entender lo que hace.
+En la figura \ref{fig:micmanual} podemos ver un extracto del manual. \cite{manualmic}\\
+A continuación explicaremos el funcionamiento de los botones.
 
 
 \begin{figure}[h!]
  \centering
- \includegraphics[scale=0.35]{microondas.png}
- \caption{Imagen de un microondas demasiado minimalista}
- \label{fig:imgsenales}
+ \includegraphics[scale=0.6]{microondasmanual.png}
+ \caption{Extracto del manual del microondas}
+ \label{fig:micmanual}
 \end{figure}
 
 
+\begin{enumerate}
+  \item Pantalla digital en la que se muestran números.
+  \item Botón AutoCook para seleccionar un menú de forma secuencial.
+  \item Botón Reheat para recalentar platos. Se selecciona una opción de forma secuencial.
+  \item Boton defrost para descongelar alimentos. Se selecciona una opción de forma secuencial.
+  \item Igual que el botón defrost pero de forma más rapida.
+  \item Enciende el microondas.
+  \item Inicia la limpieza automática mediante el vapor de agua de un vaso.
+  \item Botón calientaplatos.
+  \item Activa la funcion grill.
+  \item Activa la funcion Combi
+  \item Selectores de tiempo y peso.
+  \item Para el microondas.
+  \item Inicia el microondas.
+\end{enumerate}
+
+
+
+
+\subsection{Planteamiento del problema}
+\subsubsection{Problema 1: Diferenciación poco clara de etiquetas y botones.}
+
+El primer problema ante el que nos encontramos es en que no tenemos claro qué es un botón y qué no, el ser los botones táctiles no ayuda a la tarea, además que en un entorno de cocina, esta decisión puede dificultar la tarea al no llevarse bien los dedos mojados con los paneles táctiles. Como ya hemos mencionado no queda nada claro donde pulsar ni qué son los botones, dificultando a primera vista la tarea de usar el aparato. Un ejemplo de este problema lo podemos ver en la figura \ref{fig:miccontrol}
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[scale=1]{microondasampliado.png}
+ \caption{Ampliación de los controles del microondas}
+ \label{fig:miccontrol}
+\end{figure}
+
+\subsubsection{Problema 2: Colocación incorrecta de botones importantes.}
+El siguiente problema que vemos es que botones importantes que deberían estar diferenciados, como el botón Power, están en medio del panel confundido con los demás, llevando a confusión y a pulsarlo sin querer en un momento dado.
+
 \subsection{Soluciones propuestas}
 \subsubsection{Solución al problema 1}
+Una solución sencilla al problema numero uno es la de utilizar botones comunes que no se confundan con sus etiquetas. Para ello deberiamos de prescindir del aspecto minimalista y utilizar un aspecto mucho mas centrado en la usabilidad. Intentar sacar al mercado un producto que tenga la ultima tecnología esta bien, pero no deberia ser un producto que no se pueda usar teniendo las manos mojadas, algo común en una cocina.
+Un uso del color mas interesante tambien ayudaría a distinguir entre etiquetas y botones, actualmente todo es blanco. Para mejorar este diseño se podrian utilizar colores que se diferencien bien, lo que nos aseguraría mejorar la memoria sensorial \cite{diapTema1} del aparato y a distinguir mejor los botones.
+
+\subsubsection{Solución al problema 2}
+La solución más sencilla sería redistribuir los botones, destacando los importantes y colocandolos por ejemplo en la esquina superior, justo debajo o incluso al lado del panel de los minutos, de esta forma destacan y se evita pulsarlos de forma equivocada.
 
 
 \subsubsection{Aspectos positivos del diseño inicial}
+%TODO
 \subsubsection{Propuesta adicional}
-
+%TODO
 
 
 
@@ -208,7 +246,6 @@ Cualquier persona con un mínimo conocimiento de creación de paginas web puede 
 
 
 \begin{thebibliography}{99}
-º
 \bibitem{diapTema1}
   José mariano González Romano y Víctor Díaz Madrigal,
   \textit{Introducción a la IPO},
@@ -219,10 +256,10 @@ ISO,
 \textit{ISO 25010},
 \href{https://iso25000.com/index.php/normas-iso-25000/iso-25010/23-usabilidad}{Página Web}.
 
-\bibitem{diapTema2}
-José mariano González Romano y Víctor Díaz Madrigal,
-\textit{Introducción a la IPO},
-\href{https://s3-eu-central-1.amazonaws.com/learn-eu-central-1-prod-fleet01-xythos/5ac734ed505df/1548262?response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27IPO-2018-19-02-Usabilidad.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20181009T201947Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=AKIAIZ3QX2YUHH4EOO3A%2F20181009%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=b0015ef5189a68a14076abd0ef07c9f15c07aa1ef5bebf8a545bf456bbfafe84}{Diapositivas de clase. Tema 2}.
+\bibitem{manualmic}
+Daewoo Electronics,
+\textit{Manual de Usuario},
+\href{http://www.daewooelectronics.co.uk/media/manual/KOG-6F2B_Manual.pdf}{Manual Online}.
 
 \bibitem{webSimply}
 Grupo Simply Supermercados,
